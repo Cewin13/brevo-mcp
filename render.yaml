@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: brevo-mcp
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python brevo_mcp.py
+    envVars:
+      - key: BREVO_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
