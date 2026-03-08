@@ -14,13 +14,7 @@ from fastmcp import FastMCP
 # ──────────────────────────────────────────────
 BREVO_API_BASE = "https://api.brevo.com/v3"
 
-mcp = FastMCP(
-    "brevo_mcp",
-    host="0.0.0.0",
-    port=int(os.environ.get("PORT", 10000)),
-    stateless_http=True,
-    json_response=True,
-)
+mcp = FastMCP("brevo_mcp")
 
 # ──────────────────────────────────────────────
 # Shared Utilities
