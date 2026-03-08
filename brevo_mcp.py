@@ -391,4 +391,8 @@ async def brevo_send_template(template_id: int, to_email: str, to_name: str = ""
 
 # ──────────────────────────────────────────────
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run(
+        transport="streamable-http",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 10000)),
+    )
